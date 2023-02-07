@@ -1,6 +1,19 @@
 # NeRF-Diffusion
 Using diffusion-based generative models to extrapolate unseen views and improve the 3D reconstruction of Dynamic and Robust Neural Radiance Fields
 
+
+# Brainstorming Questions
+
+### Stereo: 
+
+What is the effectiveness of SpareFusion with stereo input? Is it sufficient to have two different views of the object (stereo) for nearby objects, or do we need very different views? 
+
+### Dynamic: 
+
+Can the geometry captured at a given time step be matched to the geometry captured at t+1 if the object has moved a lot? Can the new views of this moved object be used to improve the 3D reconstruction?
+Can we extract geometry aware features from a DYNAMIC scene with an Epipolar Feature Transformer (from SpareFusion)? We can use a view conditioned latent diffusion model to reconstruct unseen views of static objects, are we able to apply this dynamically? 
+
+# Resources
 ### Visual dynamic SLAM using diffusion or knowledge priors to speed up the process with limited information:
 #### Camera estimation:
   ##### Robust Dynamic Radiance Fields: https://robust-dynrf.github.io/
@@ -18,12 +31,13 @@ Using diffusion-based generative models to extrapolate unseen views and improve 
 </p>
 
 Method: 
-"To enable plausible and 3D-consistent predictions, we instead take a two step approach as outlined in Figure 2. First, we learn a probabilistic view-synthesis model that, us- ing geometry-guided diffusion, can model the distribution of images from query views given the sparse-view context (Section 4.1). While this allows generating detailed and di- verse outputs, the obtained renderings lack 3D consistency. To extract a 3D representation, we propose a 3D neural dis- tillation process that ‘distills’ the predicted view distribu- tions into a consistent 3D mode (Section 4.2)."
+"To enable plausible and 3D-consistent predictions, we instead take a two step approach as outlined in Figure 2. First, we learn a probabilistic view-synthesis model that, using geometry-guided diffusion, can model the distribution of images from query views given the sparse-view context (Section 4.1). While this allows generating detailed and di- verse outputs, the obtained renderings lack 3D consistency. To extract a 3D representation, we propose a 3D neural distillation process that ‘distills’ the predicted view distribu- tions into a consistent 3D mode (Section 4.2)."
 
 #### RenderDiffusion: https://arxiv.org/abs/2211.09869
 
 ### Prior knowledge to train faster NeRF
   #### DietNeRF: https://github.com/ajayjain/DietNeRF
 
-### Applications - ARCLab Papers:
+# Applications 
+### ARCLab Papers:
 #### https://arxiv.org/pdf/2210.16674.pdf
