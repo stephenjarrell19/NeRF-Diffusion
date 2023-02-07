@@ -6,7 +6,7 @@ Using diffusion-based generative models to extrapolate unseen views and improve 
 
 ### Stereo: 
 
-What is the effectiveness of SpareFusion with stereo input? Is it sufficient to have two different views of the object (stereo) for nearby objects, or do we need very different views? Can we store a set of geometric representation from the EFT across time steps?
+What is the effectiveness of SpareFusion with stereo input? Is it sufficient to have two different views of the object (stereo) for nearby objects, or do we need very different views? Can we store a set of geometric representations from the EFT across time steps?
 
 ### Dynamic: 
 
